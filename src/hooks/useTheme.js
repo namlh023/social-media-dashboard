@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import themes from "./themes";
+import themes from "../theme/themes";
 import { setToLS, getFromLS } from "../utils/localstorage";
 
 function useTheme() {
@@ -21,12 +21,12 @@ function useTheme() {
     }
   }, []);
 
-  const setPreferTheme = (theme) => {
+  const setUserPreferTheme = (theme) => {
     setToLS("theme", JSON.stringify(theme));
     setTheme(theme);
   };
 
-  return [theme, setPreferTheme];
+  return [theme, setUserPreferTheme];
 }
 
 export default useTheme;
