@@ -1,7 +1,7 @@
 import StyledWrapper from "./styled";
 
-function Wrapper() {
-  return <StyledWrapper />;
+function Wrapper(props) {
+  return <StyledWrapper>{props.children}</StyledWrapper>;
 }
 
 export default Wrapper;
