@@ -7,9 +7,9 @@ function useTheme() {
 
   useEffect(() => {
     const lsTheme = getFromLS("theme");
-    if (lsTheme) {
+    try {
       setTheme(JSON.parse(lsTheme));
-    } else {
+    } catch {
       const prefersDark = window.matchMedia(
         "(prefers-color-scheme: dark)"
       ).matches;

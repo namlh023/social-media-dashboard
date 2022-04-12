@@ -11,9 +11,9 @@ function App() {
   const [theme, setTheme] = useTheme();
   const [darkTheme, setDarkTheme] = useState(false);
 
-  // useEffect(() => {
-  //   darkTheme ? setTheme(themes.dark) : setTheme(themes.light);
-  // }, [darkTheme]);
+  useEffect(() => {
+    darkTheme ? setTheme(themes.dark) : setTheme(themes.light);
+  }, [darkTheme]);
 
   // useEffect(() => {
   //   setTheme(themes.dark);
