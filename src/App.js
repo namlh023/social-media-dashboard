@@ -9,18 +9,18 @@ import themes from "./theme/themes";
 
 function App() {
   const [theme, setTheme] = useTheme();
-  const [darkTheme, setDarkTheme] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
 
   useEffect(() => {
-    darkTheme ? setTheme(themes.dark) : setTheme(themes.light);
-  }, [darkTheme]);
+    isDarkTheme ? setTheme(themes.dark) : setTheme(themes.light);
+  }, [isDarkTheme]);
 
   // useEffect(() => {
   //   setTheme(themes.dark);
   // }, []);
 
   return (
-    <ThemeContext.Provider value={{ darkTheme, setDarkTheme }}>
+    <ThemeContext.Provider value={{ isDarkTheme, setIsDarkTheme }}>
       <ThemeProvider theme={theme}>
         <Reset />
         <Wrapper>

@@ -6,7 +6,9 @@ import { ThemeContext } from "../../contexts/context";
 
 export default function Header() {
   const { width } = useWindowSize();
-  const { darkTheme, setDarkTheme } = useContext(ThemeContext);
+  const { isDarkTheme, setIsDarkTheme } = useContext(ThemeContext);
+
+  const handleToggle = () => setIsDarkTheme(!isDarkTheme);
 
   return (
     <StyledHeader>
@@ -17,10 +19,7 @@ export default function Header() {
       {width <= 922 && <StyledLine />}
       <div className="mode">
         <StyledText>Dark Mode</StyledText>
-        <Switch
-          checked={darkTheme}
-          onChange={() => setDarkTheme((prev) => !prev)}
-        />
+        <Switch checked={isDarkTheme} onChange={handleToggle} />
       </div>
     </StyledHeader>
   );
