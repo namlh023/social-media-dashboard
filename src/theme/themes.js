@@ -12,6 +12,7 @@ const themes = {
     cardBg: "hsl(227, 47%, 96%)",
     text1: "hsl(228, 12%, 44%)",
     text2: "hsl(230, 17%, 14%)",
+    line: "hsl(229, 19%, 59%)",
   },
   dark: {
     numberUp: "hsl(163, 72%, 41%)",
@@ -26,6 +27,7 @@ const themes = {
     cardBg: "hsl(228, 28%, 20%)",
     text1: "hsl(228, 34%, 66%)",
     text2: "hsl(0, 0%, 100%)",
+    line: "hsl(228, 25%, 27%)",
   },
 };
 

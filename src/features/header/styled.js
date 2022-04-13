@@ -53,5 +53,5 @@ export const StyledText = styled.p`
 export const StyledLine = styled.div`
   height: 1px;
   width: 100%;
-  background-color: ${({ theme }) => theme.toggle};
+  background-color: ${({ theme }) => theme.line};
 `;
