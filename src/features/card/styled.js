@@ -6,6 +6,11 @@ export const StyledCard = styled.div`
   max-width: ${(props) => props.width || "400px"};
   min-height: ${(props) => props.height || "216px"};
   padding: ${(props) => props.padding || "30px"};
+  cursor: pointer;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.cardBgHover};
+  }
 
   @media (min-width: 992px) {
     max-width: ${(props) => props.width || "255px"};
