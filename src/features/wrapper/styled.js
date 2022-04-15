@@ -6,6 +6,14 @@ const StyledWrapper = styled.main`
   font-family: "Inter", sans-serif;
   padding: 1.5rem 1rem;
   background: ${({ theme }) => theme.bg};
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .inner-wrapper {
+    max-width: 1070px;
+  }
 `;
 
 export default StyledWrapper;

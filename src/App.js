@@ -22,9 +22,11 @@ function App() {
       <ThemeProvider theme={theme}>
         <Reset />
         <Wrapper>
-          <Header />
-          <Follower />
-          <Overview />
+          <div className="inner-wrapper">
+            <Header />
+            <Follower />
+            <Overview />
+          </div>
         </Wrapper>
       </ThemeProvider>
     </ThemeContext.Provider>
