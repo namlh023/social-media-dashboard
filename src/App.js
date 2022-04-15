@@ -7,6 +7,7 @@ import Reset from "./styled/reset";
 import Header from "./features/header";
 import Wrapper from "./features/wrapper";
 import Follower from "./features/followers";
+import Overview from "./features/overview";
 
 function App() {
   const [theme, setTheme] = useTheme();
@@ -23,6 +24,7 @@ function App() {
         <Wrapper>
           <Header />
           <Follower />
+          <Overview />
         </Wrapper>
       </ThemeProvider>
     </ThemeContext.Provider>

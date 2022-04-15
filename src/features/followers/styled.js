@@ -32,4 +32,18 @@ export const StyledFollower = styled.div`
     letter-spacing: 5px;
     color: ${({ theme }) => theme.text1};
   }
+
+  .up {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: ${({ theme }) => theme.numberUp};
+  }
+
+  .down {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: ${({ theme }) => theme.numberDown};
+  }
 `;

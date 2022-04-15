@@ -64,7 +64,9 @@ export default function Follower() {
                   alt=""
                   aria-hidden="true"
                 />
-                <p>{Math.abs(f.today)} Today</p>
+                <p className={f.today > 0 ? "up" : "down"}>
+                  {Math.abs(f.today)} Today
+                </p>
               </Flex>
             </Flex>
           </StyledCardPrimary>
