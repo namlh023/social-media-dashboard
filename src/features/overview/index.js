@@ -71,18 +71,18 @@ export default function Overview() {
   return (
     <StyledOverview>
       <h3 className="h3-like">Overview - Today</h3>
-      <StyledListCard padding="16px">
+      <StyledListCard $padding="16px">
         {overviews.map((o) => {
           return (
-            <StyledCard height="0px">
-              <Flex direction="column" ai="stretch" gap="48px">
-                <Flex jc="space-between">
-                  <p className="p-like">Page Views</p>
+            <StyledCard key={o.id} as="li" $height="0px">
+              <Flex $direction="column" $ai="stretch" $gap="48px">
+                <Flex $jc="space-between">
+                  <p className="p-like">{o.type}</p>
                   <img src={o.icon} alt="" aria-hidden="true" />
                 </Flex>
-                <Flex jc="space-between">
+                <Flex $jc="space-between">
                   <p className="number">{o.number}</p>
-                  <Flex gap="6px">
+                  <Flex $gap="6px">
                     <img
                       src={o.percent > 0 ? iconUp : iconDown}
                       alt=""

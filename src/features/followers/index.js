@@ -48,17 +48,17 @@ export default function Follower() {
     <StyledFollower>
       <StyledListCard>
         {followers.map((f) => (
-          <StyledCardPrimary as="li" key={f.id} type={f.type}>
-            <Flex jc="space-between" direction="column" gap="24px">
-              <Flex className="header" gap="10px">
+          <StyledCardPrimary as="li" key={f.id} $type={f.type}>
+            <Flex jc="space-between" $direction="column" $gap="24px">
+              <Flex className="header" $gap="10px">
                 <img src={f.icon} alt="" aria-hidden="true" />
                 <p className="name">{f.name}</p>
               </Flex>
-              <Flex direction="column" gap="10px">
+              <Flex $direction="column" gap="10px">
                 <h2 className="h2-like">{f.followers}</h2>
                 <p className="p-like">FOLLOWERS</p>
               </Flex>
-              <Flex gap="6px">
+              <Flex $gap="6px">
                 <img
                   src={f.today > 0 ? iconUp : iconDown}
                   alt=""
